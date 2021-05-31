@@ -18,9 +18,9 @@ class Repository private constructor(private val RemoteDataSource: RemoteDataSou
         private var instance: Repository? = null
 
 
-        fun getInstance(catalogueRemoteData: RemoteDataSource): Repository =
+        fun getInstance(remoteData: RemoteDataSource): Repository =
             instance ?: synchronized(this) {
-                instance ?: Repository(catalogueRemoteData).apply { instance = this }
+                instance ?: Repository(remoteData).apply { instance = this }
             }
 
     }
@@ -31,10 +31,10 @@ class Repository private constructor(private val RemoteDataSource: RemoteDataSou
         CoroutineScope(IO).launch {
             RemoteDataSource.getMovies(object :
                 RemoteDataSource.LoadMovieCallback {
-                override fun onAllMovieReceived(movieCatalogueResponse: List<ItemMovie>) {
+                override fun onAllMovieReceived(movie: List<ItemMovie>) {
                     val listMovies = ArrayList<ItemMovie>()
-                    for (response in movieCatalogueResponse) {
-                        val movie = ItemMovie(
+                    for (response in movie) {
+                        val movies = ItemMovie(
                             response.id,
                             response.title,
                             response.posterPath,
@@ -42,7 +42,7 @@ class Repository private constructor(private val RemoteDataSource: RemoteDataSou
                             response.voteAverage,
                             response.overview
                         )
-                        listMovies.add(movie)
+                        listMovies.add(movies)
                     }
                     listMoviesOutput.postValue(listMovies)
                     _isLoading.postValue(false)
@@ -57,9 +57,9 @@ class Repository private constructor(private val RemoteDataSource: RemoteDataSou
         CoroutineScope(IO).launch {
             RemoteDataSource.getTvShows(object :
                 RemoteDataSource.LoadTvShowCallback {
-                override fun onAllTvShowReceived(tvShowCatalogueResponse: List<ItemTvShow>) {
+                override fun onAllTvShowReceived(tvShow: List<ItemTvShow>) {
                     val listTvShow = ArrayList<ItemTvShow>()
-                    for (response in tvShowCatalogueResponse) {
+                    for (response in tvShow) {
                         val tvShows = ItemTvShow(
                             response.id,
                             response.originalName,
@@ -79,48 +79,48 @@ class Repository private constructor(private val RemoteDataSource: RemoteDataSou
     }
 
     override fun getTvShowById(tvShowId: Int): LiveData<ItemTvShow> {
-        val tvShowDetailOutput = MutableLiveData<ItemTvShow>()
+        val tvShowDetail = MutableLiveData<ItemTvShow>()
         CoroutineScope(IO).launch {
             RemoteDataSource.getTvShowDetail(
                 tvShowId,
                 object : RemoteDataSource.LoadTvShowsByIdCallback {
-                    override fun onTvShowsDetailReceived(tvShowsCatalogue: ItemTvShow) {
+                    override fun onTvShowsDetailReceived(tvShow: ItemTvShow) {
                         val tvShowsDetail = ItemTvShow(
-                            tvShowsCatalogue.id,
-                            tvShowsCatalogue.originalName,
-                            tvShowsCatalogue.posterPath,
-                            tvShowsCatalogue.firstAirDate,
-                            tvShowsCatalogue.voteAverage,
-                            tvShowsCatalogue.overview
+                            tvShow.id,
+                            tvShow.originalName,
+                            tvShow.posterPath,
+                            tvShow.firstAirDate,
+                            tvShow.voteAverage,
+                            tvShow.overview
                         )
-                        tvShowDetailOutput.postValue(tvShowsDetail)
+                        tvShowDetail.postValue(tvShowsDetail)
                         _isLoading.postValue(false)
                     }
                 })
         }
-        return tvShowDetailOutput
+        return tvShowDetail
     }
 
     override fun getMovieById(movieId: Int): LiveData<ItemMovie> {
-        val movieDetailOutput = MutableLiveData<ItemMovie>()
+        val movieDetail = MutableLiveData<ItemMovie>()
         CoroutineScope(IO).launch {
             RemoteDataSource.getMovieDetail(
                 movieId,
                 object : RemoteDataSource.LoadMovieByIdCallback {
-                    override fun onMovieDetailReceived(movieCatalogueResponse: ItemMovie) {
+                    override fun onMovieDetailReceived(movie: ItemMovie) {
                         val moviesDetail = ItemMovie(
-                            movieCatalogueResponse.id,
-                            movieCatalogueResponse.title,
-                            movieCatalogueResponse.posterPath,
-                            movieCatalogueResponse.releaseDate,
-                            movieCatalogueResponse.voteAverage,
-                            movieCatalogueResponse.overview
+                            movie.id,
+                            movie.title,
+                            movie.posterPath,
+                            movie.releaseDate,
+                            movie.voteAverage,
+                            movie.overview
                         )
-                        movieDetailOutput.postValue(moviesDetail)
+                        movieDetail.postValue(moviesDetail)
                         _isLoading.postValue(false)
                     }
                 })
         }
-        return movieDetailOutput
+        return movieDetail
     }
 }

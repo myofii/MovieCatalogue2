@@ -51,7 +51,6 @@ class DetailActivity : AppCompatActivity() {
                 .into(imgPoster)
             tvName.text = result.title + " ("+ result.releaseDate.substring(0,4) + ")"
             tvRating.text = result.voteAverage.toString()
-            tvGenre.text = "● -"
             tvDesc.text = result.overview
         }
     }
@@ -63,7 +62,6 @@ class DetailActivity : AppCompatActivity() {
                 .into(imgPoster)
             tvName.text = result.originalName + " ("+ result.firstAirDate.substring(0,4) + ")"
             tvRating.text = result.voteAverage.toString()
-            tvGenre.text = "● -"
             tvDesc.text = result.overview
         }
     }

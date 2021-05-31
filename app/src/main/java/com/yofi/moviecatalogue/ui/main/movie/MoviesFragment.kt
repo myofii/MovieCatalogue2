@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.yofi.moviecatalogue.R
 import com.yofi.moviecatalogue.databinding.FragmentListMovieBinding
-import com.yofi.moviecatalogue.ui.main.ListAdapter
 import com.yofi.moviecatalogue.ui.main.MainViewModel
 import com.yofi.moviecatalogue.viewmodel.ViewModelFactory
 

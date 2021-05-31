@@ -1,13 +1,11 @@
 package com.yofi.moviecatalogue.ui.main.movie
 
-import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.yofi.moviecatalogue.BuildConfig
-import com.yofi.moviecatalogue.data.DataEntity
 import com.yofi.moviecatalogue.data.source.response.ItemMovie
 import com.yofi.moviecatalogue.databinding.ItemFilmBinding
 import com.yofi.moviecatalogue.ui.detail.DetailActivity
@@ -29,7 +27,6 @@ class MovieAdapter: RecyclerView.Adapter<MovieAdapter.LinearViewHolder>() {
                     .into(imgPoster)
                 tvName.text = data.title + " ("+data.releaseDate.substring(0,4)+")"
                 tvRating.text = data.voteAverage.toString()
-                tvGenre.text = "-"
 
                 itemView.setOnClickListener{
                     val moveIntent = Intent(itemView.context, DetailActivity::class.java)

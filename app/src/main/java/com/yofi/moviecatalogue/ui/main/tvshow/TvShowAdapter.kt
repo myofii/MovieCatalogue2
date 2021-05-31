@@ -1,6 +1,5 @@
 package com.yofi.moviecatalogue.ui.main.tvshow
 
-import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -28,7 +27,6 @@ class TvShowAdapter: RecyclerView.Adapter<TvShowAdapter.LinearViewHolder>() {
                     .into(imgPoster)
                 tvName.text = data.originalName + " ("+data.firstAirDate.substring(0,4)+")"
                 tvRating.text = data.voteAverage.toString()
-                tvGenre.text = "-"
 
                 itemView.setOnClickListener{
                     val moveIntent = Intent(itemView.context, DetailActivity::class.java)

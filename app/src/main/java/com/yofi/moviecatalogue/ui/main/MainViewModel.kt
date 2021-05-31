@@ -2,8 +2,6 @@ package com.yofi.moviecatalogue.ui.main
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import com.yofi.moviecatalogue.data.DataEntity
-import com.yofi.moviecatalogue.data.source.local.Dummy
 import com.yofi.moviecatalogue.data.source.remote.Repository
 import com.yofi.moviecatalogue.data.source.response.ItemMovie
 import com.yofi.moviecatalogue.data.source.response.ItemTvShow

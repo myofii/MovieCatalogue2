@@ -58,18 +58,18 @@ class RemoteDataSource {
     }
 
     interface LoadMovieCallback {
-        fun onAllMovieReceived(movieCatalogueResponse: List<ItemMovie>)
+        fun onAllMovieReceived(movie: List<ItemMovie>)
     }
 
     interface LoadTvShowCallback {
-        fun onAllTvShowReceived(tvShowCatalogueResponse: List<ItemTvShow>)
+        fun onAllTvShowReceived(tvShow: List<ItemTvShow>)
     }
 
     interface LoadMovieByIdCallback {
-        fun onMovieDetailReceived(movieCatalogueResponse: ItemMovie)
+        fun onMovieDetailReceived(movie: ItemMovie)
     }
 
     interface LoadTvShowsByIdCallback {
-        fun onTvShowsDetailReceived(tvShowsCatalogue: ItemTvShow)
+        fun onTvShowsDetailReceived(tvShow: ItemTvShow)
     }
 }

@@ -7,9 +7,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.yofi.moviecatalogue.R
 import com.yofi.moviecatalogue.databinding.FragmentListTvshowBinding
-import com.yofi.moviecatalogue.ui.main.ListAdapter
 import com.yofi.moviecatalogue.ui.main.MainViewModel
-import com.yofi.moviecatalogue.ui.main.movie.MovieAdapter
 import com.yofi.moviecatalogue.viewmodel.ViewModelFactory
 
 class TvShowFragment: Fragment(R.layout.fragment_list_tvshow) {

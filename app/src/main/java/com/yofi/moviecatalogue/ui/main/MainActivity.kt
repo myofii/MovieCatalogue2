@@ -2,7 +2,6 @@ package com.yofi.moviecatalogue.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import com.yofi.moviecatalogue.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
