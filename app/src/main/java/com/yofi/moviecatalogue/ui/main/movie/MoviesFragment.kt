@@ -10,8 +10,8 @@ import com.yofi.moviecatalogue.databinding.FragmentListMovieBinding
 import com.yofi.moviecatalogue.ui.main.MainViewModel
 import com.yofi.moviecatalogue.viewmodel.ViewModelFactory
 
-class MoviesFragment: Fragment(R.layout.fragment_list_movie) {
-    private var _binding : FragmentListMovieBinding? = null
+class MoviesFragment : Fragment(R.layout.fragment_list_movie) {
+    private var _binding: FragmentListMovieBinding? = null
     private val binding get() = _binding!!
     private lateinit var viewModel: MainViewModel
     private lateinit var adapter: MovieAdapter
@@ -29,25 +29,21 @@ class MoviesFragment: Fragment(R.layout.fragment_list_movie) {
             rvMovie.layoutManager = LinearLayoutManager(activity)
             rvMovie.adapter = adapter
         }
+        viewModel()
+    }
 
-        if (activity != null) {
-
-            val viewModelFactory = ViewModelFactory.getInstance()
-            activity?.let {
-                viewModel = ViewModelProvider(
-                    it,
-                    viewModelFactory
-                )[MainViewModel::class.java]
-            }
-
-            viewModel.getListMovie().observe(viewLifecycleOwner, { listMovie ->
-                binding.rvMovie.adapter?.let { adapter ->
-                    when (adapter) {
-                        is MovieAdapter -> adapter.setListDataMovie(listMovie)
-                    }
-                }
-            })
+    private fun viewModel() {
+        activity?.let {
+            viewModel = ViewModelProvider(it, ViewModelFactory.getInstance())[MainViewModel::class.java]
         }
+
+        viewModel.getListMovie().observe(viewLifecycleOwner, { listMovie ->
+            binding.rvMovie.adapter?.let { adapter ->
+                when (adapter) {
+                    is MovieAdapter -> adapter.setListDataMovie(listMovie)
+                }
+            }
+        })
     }
 
     override fun onDestroyView() {

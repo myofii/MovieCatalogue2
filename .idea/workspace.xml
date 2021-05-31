@@ -13,33 +13,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7fba789-e7ff-4461-9d6f-dc3d7cc3488b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_testing_2_1_0_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_nhaarman_mockitokotlin2_mockito_kotlin_2_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_bytebuddy_byte_buddy_1_10_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__net_bytebuddy_byte_buddy_agent_1_10_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mockito_mockito_core_3_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mockito_mockito_inline_3_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_objenesis_objenesis_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/main/ListAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/data/source/remote/FakeRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/data/source/remote/RepositoryTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/ui/LiveDataTestUtil.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/MovieCatalogue.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/MovieCatalogue.app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/yofi/moviecatalogue/ui/main/MainActivityTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/yofi/moviecatalogue/ui/main/MainActivityTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/EspressoIdlingResource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/EspressoIdlingResource.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/source/local/Dummy.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/source/local/Dummy.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/source/remote/RemoteDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/data/source/remote/RemoteDataSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/main/movie/MoviesFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/main/movie/MoviesFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/main/tvshow/TvShowFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/yofi/moviecatalogue/ui/main/tvshow/TvShowFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/ui/detail/DetailViewModelTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/ui/detail/DetailViewModelTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/ui/main/MainViewModelTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue/ui/main/MainViewModelTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\myofi\.android\avd\Pixel_4_XL_API_30.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[VirtualDevicePath@C:\Users\myofi\.android\avd\Pixel_3a_XL_API_30.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -72,7 +57,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/test/java/com/yofi/moviecatalogue" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Movie Catalogue (1)/MovieCatalogue" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../capstone" />
     <property name="project.structure.last.edited" value="Build Variants" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -386,9 +371,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Android JUnit.RepositoryTest" />
+        <item itemvalue="Android Instrumented Tests.MainActivityTest" />
         <item itemvalue="Android JUnit.MainViewModelTest" />
         <item itemvalue="Android JUnit.DetailViewModelTest" />
-        <item itemvalue="Android Instrumented Tests.MainActivityTest" />
         <item itemvalue="Android Instrumented Tests.loadMovie()" />
       </list>
     </recent_temporary>
@@ -423,14 +408,22 @@
       <option name="project" value="LOCAL" />
       <updated>1622470424437</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="beres">
+      <created>1622476339102</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1622476339102</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="tinggal instrument testing" />
     <MESSAGE value="-1 lagi" />
     <MESSAGE value="tinggal testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="tinggal testing" />
+    <MESSAGE value="beres" />
+    <option name="LAST_COMMIT_MESSAGE" value="beres" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="90" key="#Intentions" timestamp="1622471786432">
@@ -457,14 +450,14 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="349" y="187" key="AndroidCreateResourceFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1622270024662" />
-    <state x="372" y="0" key="CommitChangelistDialog2" timestamp="1622470412258">
+    <state x="372" y="0" key="CommitChangelistDialog2" timestamp="1622476336187">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="372" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1622470412258" />
-    <state x="549" y="158" key="FileChooserDialogImpl" timestamp="1622451082055">
+    <state x="372" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1622476336187" />
+    <state x="549" y="158" key="FileChooserDialogImpl" timestamp="1622480601845">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="158" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1622451082055" />
+    <state x="549" y="158" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1622480601845" />
     <state x="631" y="330" key="Github.ShareDialog" timestamp="1622464182514">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -473,26 +466,26 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="377" y="137" key="Github.UntrackedFilesDialog/0.0.1536.864@0.0.1536.864" timestamp="1622464201349" />
-    <state width="1493" height="265" key="GridCell.Tab.0.bottom" timestamp="1622476291534">
+    <state width="1493" height="265" key="GridCell.Tab.0.bottom" timestamp="1622488324711">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1622476291534" />
-    <state width="1493" height="265" key="GridCell.Tab.0.center" timestamp="1622476291534">
+    <state width="1493" height="265" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1622488324711" />
+    <state width="1493" height="265" key="GridCell.Tab.0.center" timestamp="1622488324711">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1622476291534" />
-    <state width="1493" height="265" key="GridCell.Tab.0.left" timestamp="1622476291534">
+    <state width="1493" height="265" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1622488324711" />
+    <state width="1493" height="265" key="GridCell.Tab.0.left" timestamp="1622488324710">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1622476291534" />
-    <state width="1493" height="265" key="GridCell.Tab.0.right" timestamp="1622476291534">
+    <state width="1493" height="265" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1622488324710" />
+    <state width="1493" height="265" key="GridCell.Tab.0.right" timestamp="1622488324711">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="265" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1622476291534" />
-    <state x="361" y="152" key="Vcs.Push.Dialog.v2" timestamp="1622470416965">
+    <state width="1493" height="265" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1622488324711" />
+    <state x="361" y="152" key="Vcs.Push.Dialog.v2" timestamp="1622476357436">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="152" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1622470416965" />
+    <state x="361" y="152" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1622476357436" />
     <state x="583" y="210" key="chooseDestDirectoryDialog" timestamp="1622475090318">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -501,5 +494,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="505" y="218" key="org.jetbrains.kotlin.idea.testIntegration.KotlinCreateTestDialog/0.0.1536.864@0.0.1536.864" timestamp="1622475090360" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1622479947277">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1622479947277" />
   </component>
 </project>

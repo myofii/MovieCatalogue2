@@ -50,8 +50,7 @@ class DetailViewModelTest {
         movies.value = dummyMovie
         Mockito.`when`(movieId.let { repository.getMovieById(it) }).thenReturn(movies)
 
-        val listMovieData =
-            movieId.let { viewModel.getDetailMovieById(it) }.value as ItemMovie
+        val listMovieData = movieId.let { viewModel.getDetailMovieById(it) }.value as ItemMovie
 
         assertNotNull(listMovieData)
         if (listMovieData != null) {
@@ -75,8 +74,7 @@ class DetailViewModelTest {
         tvShows.value = dummyTvShow
         Mockito.`when`(tvShowId.let { repository.getTvShowById(it) }).thenReturn(tvShows)
 
-        val listTvShowsData =
-            tvShowId.let { viewModel.getDetailTvShowById(it) }.value as ItemTvShow
+        val listTvShowsData = tvShowId.let { viewModel.getDetailTvShowById(it) }.value as ItemTvShow
 
         assertNotNull(listTvShowsData)
         if (listTvShowsData != null) {

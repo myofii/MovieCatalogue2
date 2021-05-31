@@ -39,13 +39,13 @@ class MainActivityTest {
 
     @Test
     fun loadMovie() {
+        onView(withText("Movie")).perform(click())
         onView(withId(R.id.rvMovie)).check(matches(isDisplayed()))
         onView(withId(R.id.rvMovie)).perform(
             RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(
                 dummyMovie.size
             )
         )
-//        delayedTime()
         onView(withId(R.id.rvMovie)).perform(
             RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(
                 6, click()

@@ -29,27 +29,22 @@ class TvShowFragment: Fragment(R.layout.fragment_list_tvshow) {
             rvTvShow.layoutManager = LinearLayoutManager(activity)
             rvTvShow.adapter = adapter
         }
-
-        if (activity != null) {
-
-            val viewModelFactory = ViewModelFactory.getInstance()
-            activity?.let {
-                viewModel = ViewModelProvider(
-                    it,
-                    viewModelFactory
-                )[MainViewModel::class.java]
-            }
-
-            viewModel.getListTvShow().observe(viewLifecycleOwner, { listTvShow ->
-                binding.rvTvShow.adapter?.let { adapter ->
-                    when (adapter) {
-                        is TvShowAdapter -> adapter.setListDataTvShow(listTvShow)
-                    }
-                }
-            })
-        }
+        viewModel()
     }
 
+    private fun viewModel() {
+        activity?.let {
+            viewModel = ViewModelProvider(it, ViewModelFactory.getInstance())[MainViewModel::class.java]
+        }
+
+        viewModel.getListTvShow().observe(viewLifecycleOwner, { listTvShow ->
+            binding.rvTvShow.adapter?.let { adapter ->
+                when (adapter) {
+                    is TvShowAdapter -> adapter.setListDataTvShow(listTvShow)
+                }
+            }
+        })
+    }
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
