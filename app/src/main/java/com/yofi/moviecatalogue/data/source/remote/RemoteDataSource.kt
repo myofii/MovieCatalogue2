@@ -49,9 +49,9 @@ class RemoteDataSource {
 
     suspend fun getTvShowDetail(tvShowsId: Int, callback: LoadTvShowsByIdCallback) {
         EspressoIdlingResource.increment()
-        ApiConf.getApiService().getTvShowById(tvShowsId).await().let { tvShows ->
+        ApiConf.getApiService().getTvShowById(tvShowsId).await().let { tvShowsById ->
             callback.onTvShowsDetailReceived(
-                tvShows
+                tvShowsById
             )
             EspressoIdlingResource.decrement()
         }
